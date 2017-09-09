@@ -1,8 +1,9 @@
 FROM python:3
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update -q && apt-get install -yq --no-install-recommends \
     git \
-    mono-complete
+    mono-complete \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install gitsemver
 ADD https://downloads.haprotec.de/gitsemver/gitsemver.deb /
