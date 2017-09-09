@@ -13,3 +13,4 @@ RUN dpkg -i ./gitsemver.deb && rm gitsemver.deb
 RUN git clone https://gitlab.com/haprotec/haprotec-python-lib.git
 RUN pip install ./haprotec-python-lib
 
+USER gitlab-runner
