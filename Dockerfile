@@ -16,4 +16,5 @@ RUN pip install ./haprotec-python-lib
 RUN useradd -ms /bin/bash gitlab-runner && \
     mkdir -p /workspace && \
     chown gitlab-runner /workspace 
+WORKDIR /workspace
 USER gitlab-runner
